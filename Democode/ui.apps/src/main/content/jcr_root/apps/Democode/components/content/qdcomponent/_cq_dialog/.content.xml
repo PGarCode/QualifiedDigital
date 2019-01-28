@@ -36,13 +36,16 @@
                                             fieldLabel="Item Image Path"
                                             name="./itemImagePath"
                                             rootPath="/content/dam"/>
+                                        <itemTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Item Title"
+                                                name="./itemTitle"/>
                                         <itemText
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                sling:resourceType="granite/ui/components/foundation/form/textarea"
                                                 fieldLabel="Item Text"
-                                                name="./itemText"
-                                                removeSingleParagraphContainer="{Boolean}true"
-                                                useFixedInlineToolbar="{Boolean}true"/>
+                                                name="./itemText"/>
                                         <itemLink
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
@@ -58,11 +61,6 @@
                                 sling:resourceType="granite/ui/components/foundation/form/hidden"
                                 name="./accordionItems1@TypeHint" value="String[]" />
                     </MfListItems>
-                    <!--<text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/-->>
                 </items>
             </column>
         </items>

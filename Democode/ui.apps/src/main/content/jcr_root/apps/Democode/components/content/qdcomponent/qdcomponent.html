@@ -1,4 +1,4 @@
-
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Edit ${component.title}"></div>
 <section id="qd-demo-root"
          data-sly-use.MFItems="${'com.adobe.acs.commons.widgets.MultiFieldPanelWCMUse' @ name='MfListItems'}">
   <div class="row">
@@ -14,7 +14,8 @@
     <sly data-sly-list="${MFItems.values}">
       <div class="info-parent item-${itemList.index} hidden">
           <div class="info">
-            <sly data-sly-test="${item.itemText}"><strong>${item.itemText @context='html'}</strong><br></sly><br>
+            <p><strong>${item.itemTitle}</strong></p>
+            <sly data-sly-test="${item.itemText}"><p>${item.itemText}</p></sly><br>
 
             <sly data-sly-test="${item.itemLink}" >
               <a class="cta-link" href="${item.itemLink @context='html'}" target="_blank">Go to our Website</a><br>
