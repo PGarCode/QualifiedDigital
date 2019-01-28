@@ -1,0 +1,26 @@
+
+<section id="qd-demo-root"
+         data-sly-use.MFItems="${'com.adobe.acs.commons.widgets.MultiFieldPanelWCMUse' @ name='MfListItems'}">
+  <div class="row">
+    <div class="logo-parent">
+      <sly data-sly-list="${MFItems.values}">
+          <div id="item-${itemList.index}" class="logo item-${itemList.index} dim">
+            <div class="img-cell">
+              <sly data-sly-test="${item.itemImagePath}"><img src="${item.itemImagePath}"></sly>
+            </div>
+          </div>
+      </sly>
+    </div>
+    <sly data-sly-list="${MFItems.values}">
+      <div class="info-parent item-${itemList.index} hidden">
+          <div class="info">
+            <sly data-sly-test="${item.itemText}"><strong>${item.itemText @context='html'}</strong><br></sly><br>
+
+            <sly data-sly-test="${item.itemLink}" >
+              <a class="cta-link" href="${item.itemLink @context='html'}" target="_blank">Go to our Website</a><br>
+            </sly>
+          </div>
+      </div>
+    </sly>
+  </div>
+</section>
