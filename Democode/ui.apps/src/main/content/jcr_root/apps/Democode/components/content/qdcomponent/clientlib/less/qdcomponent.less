@@ -1,0 +1,64 @@
+/*
+ *  Copyright 2017 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+#qd-demo-root {
+    .img-cell {
+         display: table-cell;
+         vertical-align: middle;
+
+        img {
+            width: 120px;
+            height: 120px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            cursor: pointer;
+        }
+    }
+    .dim {
+      opacity: .2;
+      transition: opacity 1s linear;
+    }
+    .dim:hover {
+      opacity: 1;
+    }
+
+    .logo-parent, .info-parent {
+      display:  inline-block;
+    }
+    .info-parent {
+        border-top: 6px solid limegreen;
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        vertical-align: top;
+        max-height: 600px;
+        max-width: 450px;
+        position: absolute;
+        left: 150px;
+        padding: 81px;
+        box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.2);
+
+        a {
+            border: 1px solid royalblue;
+            padding: 10px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: royalblue;
+        }
+    }
+    .hidden {
+      visibility: hidden;
+    }
+}

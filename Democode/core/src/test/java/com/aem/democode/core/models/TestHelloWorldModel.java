@@ -29,7 +29,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Simple JUnit test verifying the HelloWorldModel
+ * Simple JUnit common verifying the HelloWorldModel
  */
 public class TestHelloWorldModel {
 

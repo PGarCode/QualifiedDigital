@@ -40,7 +40,7 @@
     </scm-->
 
     <!-- 
-        To keep the instance under test running and run individual tests
+        To keep the instance under common running and run individual tests
         against it, use:
         
             mvn clean verify -DkeepJarRunning=true -Dhttp.port=8080
@@ -63,7 +63,7 @@
         <!-- Set this to run tests against an existing server instance -->
         <keepJarRunning>false</keepJarRunning>
         
-        <!-- Set this to run tests against a specific hostname, if test.server.url is not set-->
+        <!-- Set this to run tests against a specific hostname, if common.server.url is not set-->
         <test.server.hostname />
 
         <!-- Set this to use a different username for remote execution of sling junit tests -->
@@ -98,7 +98,7 @@
                         <fileset>
                             <directory>${basedir}</directory>
                             <includes>
-                                <!-- sling folder is the workdir of the executable jar that we test -->
+                                <!-- sling folder is the workdir of the executable jar that we common -->
                                 <include>sling/**</include>
                             </includes>
                         </fileset>
@@ -245,7 +245,7 @@
     </profiles>
 
     <dependencies>
-        <!-- Additional bundles needed by the Sling instance under test -->
+        <!-- Additional bundles needed by the Sling instance under common -->
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.junit.core</artifactId>

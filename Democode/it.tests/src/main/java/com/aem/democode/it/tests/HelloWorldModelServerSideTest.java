@@ -37,8 +37,8 @@ import com.aem.democode.core.models.HelloWorldModel;
 /** 
  *  Test case which uses OSGi services injection
  *  
- *  <p>It relies on the <tt>ResourceResolverFactory</tt> to create test resources
- *  and then adapt them to the class under test - <tt>HelloWorldModel</tt>.</p>
+ *  <p>It relies on the <tt>ResourceResolverFactory</tt> to create common resources
+ *  and then adapt them to the class under common - <tt>HelloWorldModel</tt>.</p>
  */
 @RunWith(SlingAnnotationsTestRunner.class)
 public class HelloWorldModelServerSideTest {
@@ -76,8 +76,8 @@ public class HelloWorldModelServerSideTest {
     @Test
     public void testHelloWorldModelServerSide() throws Exception {
         
-        assertNotNull("Expecting the ResourceResolverFactory to be injected by Sling test runner", rrf);
-        assertNotNull("Expecting the SlingSettingsService to be injected by Sling test runner", settings);
+        assertNotNull("Expecting the ResourceResolverFactory to be injected by Sling common runner", rrf);
+        assertNotNull("Expecting the SlingSettingsService to be injected by Sling common runner", settings);
         
         new AdminResolverCallable() {
             @Override

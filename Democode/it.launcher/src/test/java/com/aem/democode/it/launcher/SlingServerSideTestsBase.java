@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SlingServerSideTestsBase extends SlingTestBase {
     /** Path to node that maps to Sling JUnit servlet */
-    public static final String SERVLET_NODE_PATH =  "/test/sling/" + System.currentTimeMillis();
+    public static final String SERVLET_NODE_PATH =  "/common/sling/" + System.currentTimeMillis();
     
     /** Path used to request the Sling JUnit servlet */
     public static final String SLING_JUNIT_SERVLET_PATH = SERVLET_NODE_PATH + ".junit";
